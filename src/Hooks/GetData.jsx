@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
+
 export function useGetData(endpoint) {
     const [GifData, setGifData] = useState({
         isLoading: true,
@@ -8,11 +9,13 @@ export function useGetData(endpoint) {
         error: false
     })
 
+    const {REACT_APP_VERCEL_API_KEY} = process.env
+
     const getData = async () => {
         try {
             const data = await axios.get(`https://api.giphy.com/v1/gifs/${endpoint}`, {
                 params: {
-                    api_key: process.env.API_KEY,
+                    api_key: REACT_APP_VERCEL_API_KEY,
                     limit: 12
                 }
             })
