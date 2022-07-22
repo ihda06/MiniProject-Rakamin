@@ -12,7 +12,7 @@ export function useGetData(endpoint) {
         try {
             const data = await axios.get(`https://api.giphy.com/v1/gifs/${endpoint}`, {
                 params: {
-                    api_key: process.env.REACT_APP_VERCEL_API_KEY,
+                    api_key: process.env.API_KEY,
                     limit: 12
                 }
             })

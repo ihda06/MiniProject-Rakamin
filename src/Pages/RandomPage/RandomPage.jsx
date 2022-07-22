@@ -1,7 +1,5 @@
 
-import axios from "axios"
-import { useEffect, useState } from "react"
-import { Button, Col, Container, Row } from "react-bootstrap"
+import { Button, Container } from "react-bootstrap"
 import { CardItem } from "../../Components/CardItem/CardItem"
 import NavbarComponent from "../../Components/Navbar/NavbarComponent"
 import { useGetData } from "../../Hooks/GetData"

@@ -1,6 +1,4 @@
 
-import axios from "axios"
-import { useEffect, useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import { CardItem } from "../../Components/CardItem/CardItem"
 import NavbarComponent from "../../Components/Navbar/NavbarComponent"
