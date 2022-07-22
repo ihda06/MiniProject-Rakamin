@@ -26,20 +26,22 @@ export function useGetData(endpoint) {
     useEffect(() => {
         // setLoading(true)
 
-        setGifData({
-            isLoading: true,
-            data: [],
-            error: false
-        })
         const fetch = async () => {
-            
+            setGifData({
+                isLoading: true,
+                data: [],
+                error: false
+            })
+            try {
                 const data = await getData()
                 setGifData({
                     ...GifData,
                     isLoading: false,
                     data: data,
                 })
-            
+            } catch (error) {
+                setGifData({ ...GifData, error: error })
+            }
             // setLoading(false)
             // setGifData(data.data)
 
